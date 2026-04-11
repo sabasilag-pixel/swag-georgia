@@ -2,11 +2,11 @@
 <html lang="ka">
 <head>
     <meta charset="UTF-8">
-    <title>ჩემი პორტფოლიო</title>
+    <title>Tyler's Portfolio</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #121212;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #0f0f0f;
             color: white;
             display: flex;
             justify-content: center;
@@ -16,80 +16,89 @@
         }
 
         .card {
-            background: #1e1e1e;
+            background: #1a1a1a;
             padding: 40px;
-            border-radius: 25px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
             text-align: center;
-            width: 350px;
+            width: 380px;
             border: 1px solid #333;
         }
 
         .profile-img {
-            width: 140px;
-            height: 140px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid #00d4ff;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            background-color: #333; /* თუ ფოტო არ გამოჩნდება, ცარიელი არ იყოს */
         }
 
-        h2 { margin-bottom: 5px; }
-        p { color: #888; margin-bottom: 25px; }
+        h2 { margin: 10px 0; font-size: 28px; }
+        .subtitle { color: #888; margin-bottom: 30px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* კონტაქტების სექცია */
-        .contact-info {
+        /* CONTACTS SECTION */
+        .contacts-container {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 15px;
         }
 
-        .contact-link {
+        .contact-item {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 12px;
-            background: #2a2a2a;
-            color: #00d4ff;
+            padding: 15px;
             text-decoration: none;
             border-radius: 12px;
-            font-weight: 500;
+            font-weight: bold;
             transition: 0.3s;
-            border: 1px solid transparent;
+            font-size: 16px;
         }
 
-        .contact-link:hover {
+        /* მეილის სტილი */
+        .email-btn {
+            background: #252525;
+            color: #00d4ff;
+            border: 1px solid #333;
+        }
+
+        .email-btn:hover {
             background: #333;
-            border-color: #00d4ff;
-            transform: scale(1.02);
+            transform: translateY(-3px);
         }
 
-        .phone-style {
+        /* ტელეფონის სტილი */
+        .phone-btn {
             background: #00d4ff;
             color: #000;
         }
 
-        .phone-style:hover {
+        .phone-btn:hover {
             background: #00b8e6;
-            color: #000;
+            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+            transform: translateY(-3px);
         }
+
+        .icon { margin-right: 10px; font-size: 18px; }
     </style>
 </head>
 <body>
 
     <div class="card">
-        <img src="me.jpg" alt="პროფილის ფოტო" class="profile-img">
+        <img src="me.jpg" alt="Profile" class="profile-img">
         
         <h2>Tyler</h2>
-        <p>Web Developer & Gamer</p>
+        <div class="subtitle">Web Developer & Gamer</div>
 
-        <div class="contact-info">
-            <a href="mailto:tylertyleridze@gmail.com" class="contact-link">
-                ✉️ tylertyleridze@gmail.com
+        <div class="contacts-container">
+            <a href="mailto:tylertyleridze@gmail.com" class="contact-item email-btn">
+                <span class="icon">✉️</span> tylertyleridze@gmail.com
             </a>
 
-            <a href="tel:511213350" class="contact-link phone-style">
-                📞 511 21 33 50
+            <a href="tel:511213350" class="contact-item phone-btn">
+                <span class="icon">📞</span> 511 21 33 50
             </a>
         </div>
     </div>

@@ -2,69 +2,97 @@
 <html lang="ka">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SWAG GEORGIA | OFFICIAL</title>
-    <link rel="stylesheet" href="style.css">
+    <title>ჩემი პორტფოლიო</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: #1e1e1e;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+            text-align: center;
+            width: 350px;
+            border: 1px solid #333;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #00d4ff;
+            margin-bottom: 15px;
+        }
+
+        h2 { margin-bottom: 5px; }
+        p { color: #888; margin-bottom: 25px; }
+
+        /* კონტაქტების სექცია */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            background: #2a2a2a;
+            color: #00d4ff;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 500;
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .contact-link:hover {
+            background: #333;
+            border-color: #00d4ff;
+            transform: scale(1.02);
+        }
+
+        .phone-style {
+            background: #00d4ff;
+            color: #000;
+        }
+
+        .phone-style:hover {
+            background: #00b8e6;
+            color: #000;
+        }
+    </style>
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">SWAG GEORGIA</div>
-        <ul class="nav-links">
-            <li>New Arrivals</li>
-            <li>Collection</li>
-            <li class="contact-item">
-                Contact
-                <span class="email-popup">tylertyleridze@gmail.com</span>
-            </li>
-        </ul>
-    </nav>
+    <div class="card">
+        <img src="me.jpg" alt="პროფილის ფოტო" class="profile-img">
+        
+        <h2>Tyler</h2>
+        <p>Web Developer & Gamer</p>
 
-    <section class="products">
-        <div class="product-card">
-            <img src="https://images.offerup.com/ctxv6WznTgthrsot589yggMZg00=/1440x1920/3e82/3e8294d3a7614efea1ca760f1a75e4c0.jpg" class="product-img" alt="Sp5der Hoodie">
-            <div class="product-info">
-                <p>Sp5der Web Hoodie</p>
-                <div class="price-tag">
-                    <span class="old-price">70 GEL</span>
-                    <span class="new-price">65 GEL</span>
-                </div>
-            </div>
-        </div>
+        <div class="contact-info">
+            <a href="mailto:tylertyleridze@gmail.com" class="contact-link">
+                ✉️ tylertyleridze@gmail.com
+            </a>
 
-        <div class="product-card">
-            <img src="https://img.gem.app/1677856419/1t/1751456923/vintage-polo-ralph-lauren-new-york-t-shirt.jpg" class="product-img" alt="Polo Shirt">
-            <div class="product-info">
-                <p>Polo City Shirt</p>
-                <div class="price-tag">
-                    <span class="old-price">55 GEL</span>
-                    <span class="new-price">40 GEL</span>
-                </div>
-            </div>
+            <a href="tel:511213350" class="contact-link phone-style">
+                📞 511 21 33 50
+            </a>
         </div>
-
-        <div class="product-card">
-            <img src="https://i.ebayimg.com/images/g/wS0AAeSwlVRpqDQu/s-l1200.jpg" class="product-img" alt="Ronaldo 08">
-            <div class="product-info">
-                <p>Man Utd 08 Ronaldo</p>
-                <div class="price-tag">
-                    <span class="old-price">40 GEL</span>
-                    <span class="new-price">35 GEL</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <img src="https://media-assets.grailed.com/prd/listing/temp/edc4ef1bc74041bb8d81e3631cb76d5c" class="product-img" alt="Messi 09">
-            <div class="product-info">
-                <p>Barca 09 Messi</p>
-                <div class="price-tag">
-                    <span class="old-price">40 GEL</span>
-                    <span class="new-price">35 GEL</span>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
 </body>
 </html>

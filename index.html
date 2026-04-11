@@ -2,11 +2,11 @@
 <html lang="ka">
 <head>
     <meta charset="UTF-8">
-    <title>Tyler's Portfolio</title>
+    <title>ჩემი პორტფოლიო</title>
     <style>
         body {
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #0f0f0f;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
             color: white;
             display: flex;
             justify-content: center;
@@ -16,91 +16,67 @@
         }
 
         .card {
-            background: #1a1a1a;
-            padding: 40px;
+            background: #252525;
+            padding: 30px;
             border-radius: 20px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             text-align: center;
-            width: 380px;
-            border: 1px solid #333;
+            width: 350px;
+            transition: transform 0.3s;
         }
 
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* ფოტოს სტილი */
         .profile-img {
-            width: 130px;
-            height: 130px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #00d4ff;
+            object-fit: cover; /* ეს უზრუნველყოფს რომ ფოტო არ გაიწელოს */
+            border: 4px solid #007bff;
             margin-bottom: 20px;
-            background-color: #333; /* თუ ფოტო არ გამოჩნდება, ცარიელი არ იყოს */
         }
 
-        h2 { margin: 10px 0; font-size: 28px; }
-        .subtitle { color: #888; margin-bottom: 30px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
-
-        /* CONTACTS SECTION */
-        .contacts-container {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 15px;
+        .btn-contact {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
             text-decoration: none;
-            border-radius: 12px;
+            border-radius: 25px;
             font-weight: bold;
             transition: 0.3s;
-            font-size: 16px;
         }
 
-        /* მეილის სტილი */
-        .email-btn {
-            background: #252525;
-            color: #00d4ff;
-            border: 1px solid #333;
+        .btn-contact:hover {
+            background-color: #0056b3;
+            box-shadow: 0 0 15px #007bff;
         }
 
-        .email-btn:hover {
-            background: #333;
-            transform: translateY(-3px);
+        .email-text {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #bbb;
         }
-
-        /* ტელეფონის სტილი */
-        .phone-btn {
-            background: #00d4ff;
-            color: #000;
-        }
-
-        .phone-btn:hover {
-            background: #00b8e6;
-            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
-            transform: translateY(-3px);
-        }
-
-        .icon { margin-right: 10px; font-size: 18px; }
     </style>
 </head>
 <body>
 
     <div class="card">
-        <img src="me.jpg" alt="Profile" class="profile-img">
+        <img src="me.jpg" alt="პროფილის ფოტო" class="profile-img">
         
-        <h2>Tyler</h2>
-        <div class="subtitle">Web Developer & Gamer</div>
+        <h2>გამარჯობა!</h2>
+        <p>ეს ჩემი პორტფოლიოა</p>
 
-        <div class="contacts-container">
-            <a href="mailto:tylertyleridze@gmail.com" class="contact-item email-btn">
-                <span class="icon">✉️</span> tylertyleridze@gmail.com
-            </a>
-
-            <a href="tel:511213350" class="contact-item phone-btn">
-                <span class="icon">📞</span> 511 21 33 50
-            </a>
-        </div>
+        <a href="mailto:tylertyleridze@gmail.com" class="btn-contact">
+            Contact Me
+        </a>
+        
+        <span class="email-text">tylertyleridze@gmail.com</span>
     </div>
 
 </body>
